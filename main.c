@@ -3,24 +3,26 @@
 
 int main()
 {
-    int num1, num2, *pun1, *pun2, *pun3, suma=0;
+    int a, *p;
+    p = &a;
+    system("cls");
+    printf("ingrese un valor para la variable:\n");
+    scanf("%d",&a);
 
-    printf("ingrese dos variables tipo entero\n");
-    scanf("%d %d",&num1, &num2);
-
-    suma= num1+num2;
-    printf("el resultado es:%d\n",suma);
-
-    pun1=&num1;
-    pun2=&num2;
-
-    pun3=&suma;
-    printf("direcion de num1 es:%p\n",pun1);
-    printf("direcion de num2 es:%p\n",pun2);
-    printf("direcion de suma es:%p\n",pun3);
-
-
-
-
+    while(a>=47 && a<=57){
+        printf("error, el valor debe ser mayor que cero:\n");
+        scanf("%d",&a);
+    }
+    system("cls");
+    printf("a %d\n",a);
+    printf("la direccion es %d\n",&a);
+    printf("*p=%p\n", p);
+    printf("a=%d\n", *p);
+    printf("el tamaño de *p es %d\n", sizeof(p));
+//    delete[] p;
+    printf("el valor de p es: %d\n", p);
+    p= NULL;
+    printf("valor de p: %d\n", p);
+    getch();
     return 0;
 }
